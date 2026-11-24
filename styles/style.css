@@ -61,3 +61,62 @@ body{background:#f8f4ec}.site-header{padding:12px 5%;box-shadow:0 4px 16px #173f
 .hero-art{position:relative;z-index:1}
 .hero-art img{border:7px solid rgba(255,253,247,.92);box-shadow:0 12px 30px rgba(51,48,37,.16)!important}
 @media(max-width:850px){.hero{padding:1.5rem .75rem 2rem}.hero::before{width:95px;height:42px;top:8px}.hero-copy{padding:2rem .65rem 1.4rem}.hero-art img{border-width:4px}}
+
+
+/* Reference homepage layout — restrained Italian academy look */
+body.home-page{background:#f7f0e5;color:#173d32}
+.home-page .site-header{position:relative;top:auto;min-height:88px;padding:10px clamp(18px,5vw,58px);background:#fff!important;border-bottom:1px solid #e9e4dc;box-shadow:0 3px 12px rgba(32,50,40,.06);overflow:visible}
+.home-page .site-header::before,.home-page .site-header::after{display:none!important}
+.home-page .brand{margin-left:0!important;gap:10px;color:#153e33}
+.home-page .brand img{width:58px;height:58px;object-fit:contain}
+.home-page .brand span{font-family:"Playfair Display",Georgia,serif;font-size:1.28rem;line-height:1.02;color:#183f34}
+.home-page .brand em{font-style:normal;color:#183f34}
+.home-page .main-nav{gap:clamp(4px,1.4vw,22px);flex-wrap:nowrap}
+.home-page .main-nav a{font-size:.9rem;padding:.55rem .35rem;border-radius:0;color:#243c34}
+.home-page .main-nav a.active,.home-page .main-nav a:hover{background:transparent;color:#176344;text-decoration:underline;text-decoration-color:#c94e3c;text-underline-offset:7px}
+.home-page .home-main{max-width:none;padding:0}
+.home-page .reference-hero{position:relative;display:block;height:clamp(245px,34vw,370px);min-height:245px;margin:0;padding:0;border:0;border-radius:0;overflow:hidden;background:#dceaf1;box-shadow:none;isolation:isolate}
+.home-page .reference-hero .hero-art{position:absolute;inset:0;padding:0!important;margin:0!important;max-width:none;z-index:-2}
+.home-page .reference-hero .hero-art::before{display:none!important}
+.home-page .reference-hero .hero-art img{display:block;width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center 46%;border:0!important;border-radius:0!important;box-shadow:none!important}
+.home-page .reference-hero::before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(255,253,247,.96) 0%,rgba(255,253,247,.88) 28%,rgba(255,253,247,.45) 48%,rgba(255,253,247,0) 69%)}
+.home-page .reference-hero::after{display:none!important}
+.home-page .reference-hero .hero-copy{position:absolute;left:clamp(24px,6.5vw,84px);top:50%;transform:translateY(-50%);width:min(44%,470px);padding:0;background:none;border:0;border-radius:0;box-shadow:none}
+.home-page .reference-hero .hero-copy h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.5rem,5.1vw,4.2rem);font-weight:700;line-height:1.03;letter-spacing:-.035em;color:#174c3c;margin:0 0 .42rem;text-shadow:none}
+.home-page .reference-hero .hero-copy h1 span{color:inherit}
+.home-page .reference-hero .hero-copy p{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.1rem,2vw,1.55rem);font-weight:600;color:#24372f;margin:.5rem 0 1.05rem}
+.home-page .reference-hero .hero-actions{margin:0}
+.home-page .reference-hero .button{min-width:148px;padding:.68rem 1.25rem;border:2px solid #23664c;border-radius:10px;background:#176044;color:#fff;box-shadow:0 3px 0 rgba(14,55,39,.12);font-size:1rem}
+.home-page .reference-hero .button:hover{background:#104a35;transform:translateY(-1px)}
+.home-page .home-shortcuts{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;width:min(82%,1050px);margin:-1px auto 0;padding:15px 0 10px}
+.home-page .shortcut-card{min-height:112px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:#fffefa;border:1px solid #eee8de;border-radius:17px;color:#173e33;box-shadow:0 5px 18px rgba(49,54,42,.06);font-size:1rem;font-weight:700;transition:transform .2s,box-shadow .2s}
+.home-page .shortcut-card:hover{transform:translateY(-3px);box-shadow:0 9px 22px rgba(49,54,42,.1)}
+.home-page .shortcut-card svg{width:36px;height:36px;fill:none;stroke:#174c3c;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.home-page .home-extra-links{display:flex;justify-content:center;align-items:center;gap:12px;padding:9px 0 24px;color:#8b9189;font-size:.82rem}
+.home-page .home-extra-links a{color:#315b48}
+.home-page .home-extra-links a:hover{text-decoration:underline}
+.home-page .site-footer{background:#173f33;padding:22px 16px}
+@media(max-width:850px){
+ .home-page .site-header{min-height:76px;padding:8px 4%}
+ .home-page .brand img{width:48px;height:48px}
+ .home-page .brand span{font-size:1.05rem}
+ .home-page .menu-toggle{display:block}
+ .home-page .main-nav{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0}
+ .home-page .main-nav.open{display:flex}
+ .home-page .main-nav a{padding:.65rem .5rem}
+ .home-page .reference-hero{height:clamp(260px,48vw,340px)}
+ .home-page .reference-hero .hero-copy{left:5%;width:48%}
+ .home-page .home-shortcuts{width:90%;gap:10px}
+}
+@media(max-width:560px){
+ .home-page .site-header{gap:8px}
+ .home-page .reference-hero{height:290px}
+ .home-page .reference-hero .hero-art img{aspect-ratio:auto;max-height:none;object-position:58% center}
+ .home-page .reference-hero::before{background:linear-gradient(90deg,rgba(255,253,247,.96) 0%,rgba(255,253,247,.84) 45%,rgba(255,253,247,.15) 82%)}
+ .home-page .reference-hero .hero-copy{left:5%;width:57%}
+ .home-page .reference-hero .hero-copy h1{font-size:clamp(2.05rem,9vw,2.8rem)}
+ .home-page .reference-hero .hero-copy p{font-size:1rem}
+ .home-page .reference-hero .button{min-width:125px;padding:.58rem .9rem;font-size:.9rem}
+ .home-page .home-shortcuts{width:92%;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding-top:12px}
+ .home-page .shortcut-card{min-height:100px;font-size:.94rem}
+}
