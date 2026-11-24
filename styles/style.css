@@ -39,24 +39,25 @@ body{background:#f8f4ec}.site-header{padding:12px 5%;box-shadow:0 4px 16px #173f
 
 
 
-/* Soft Italian tricolore fabric draping behind the header and home hero */
-.site-header{position:sticky;top:0;isolation:isolate;overflow:visible;background-color:rgba(255,254,250,.98)!important;background-image:linear-gradient(180deg,rgba(0,146,70,.13),rgba(0,146,70,.04) 72%,transparent),linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,.08));border-bottom:1px solid rgba(23,76,60,.12);box-shadow:0 4px 18px rgba(23,63,44,.06)}
-.site-header::before{content:"";position:absolute;z-index:0;pointer-events:none;inset:0 0 -22px;opacity:.62;background:
-linear-gradient(180deg,rgba(0,146,70,.20),rgba(0,146,70,.11) 62%,transparent) 3% 0/7.5% 100% no-repeat,
-linear-gradient(180deg,rgba(255,255,255,.78),rgba(255,255,255,.30) 70%,transparent) 11% 0/5.5% 82% no-repeat,
-linear-gradient(180deg,rgba(206,43,55,.16),rgba(206,43,55,.09) 66%,transparent) 19% 0/9% 100% no-repeat,
-linear-gradient(180deg,rgba(0,146,70,.13),rgba(0,146,70,.06) 70%,transparent) 38% 0/6% 76% no-repeat,
-linear-gradient(180deg,rgba(206,43,55,.14),rgba(206,43,55,.07) 68%,transparent) 57% 0/8% 100% no-repeat,
-linear-gradient(180deg,rgba(0,146,70,.15),rgba(0,146,70,.07) 72%,transparent) 76% 0/7% 86% no-repeat,
-linear-gradient(180deg,rgba(206,43,55,.15),rgba(206,43,55,.07) 70%,transparent) 94% 0/6% 100% no-repeat}
-.site-header::after{content:none!important}
-.site-header>.brand,.site-header>.menu-toggle,.site-header>.main-nav{position:relative;z-index:1}
-.hero{position:relative;isolation:isolate;border-radius:26px;padding:2.7rem 1.5rem 2.4rem;background-color:#fbf8f0;background-image:
-linear-gradient(112deg,rgba(0,146,70,.12),rgba(0,146,70,.055) 25%,transparent 48%),
-linear-gradient(72deg,transparent 30%,rgba(255,255,255,.86) 45%,rgba(255,255,255,.42) 57%,transparent 72%),
-linear-gradient(108deg,transparent 48%,rgba(206,43,55,.085) 70%,rgba(206,43,55,.035)),
-radial-gradient(ellipse at 8% 0%,rgba(0,146,70,.13),transparent 42%),
-radial-gradient(ellipse at 88% 100%,rgba(206,43,55,.10),transparent 43%);box-shadow:inset 0 0 0 1px rgba(23,76,60,.035)}
-.hero-copy{position:relative;z-index:1;padding:1.35rem 1.2rem 1.35rem .8rem;border-radius:22px;background:linear-gradient(105deg,rgba(0,146,70,.075),rgba(255,255,255,.42) 47%,rgba(206,43,55,.065))}
-.hero-copy h1,.hero-copy>p,.hero-copy .hero-badge,.hero-copy .hero-actions,.hero-copy .hero-note{position:relative;z-index:1}
-@media(max-width:850px){.site-header::before{inset:0 0 -15px;opacity:.5}.hero{padding:1.4rem .8rem;border-radius:18px}.hero-copy{padding:1rem .75rem;background:linear-gradient(105deg,rgba(0,146,70,.065),rgba(255,255,255,.5) 50%,rgba(206,43,55,.055))}}
+
+/* Italian proposal-board identity: ivory paper, painterly flag and flowing tricolore */
+.site-header{position:sticky;top:0;isolation:isolate;overflow:hidden;min-height:88px;padding:14px 4.5%;background:radial-gradient(ellipse at 12% 12%,rgba(0,146,70,.10),transparent 24%),radial-gradient(ellipse at 88% 10%,rgba(206,43,55,.08),transparent 23%),linear-gradient(180deg,#fffdf8 0%,#f8f2e7 100%)!important;border-bottom:1px solid #dfd4c2;box-shadow:0 5px 18px rgba(65,48,28,.08)}
+.site-header::before{content:"";position:absolute;z-index:0;pointer-events:none;left:2.2%;top:9px;width:116px;height:58px;opacity:.78;background:repeating-linear-gradient(174deg,transparent 0 5px,rgba(255,255,255,.18) 6px 7px,transparent 8px 11px),linear-gradient(90deg,#16804b 0 33.33%,#fffaf0 33.33% 66.66%,#c94c3b 66.66% 100%);clip-path:polygon(0 18%,8% 12%,15% 17%,22% 6%,30% 13%,38% 8%,48% 15%,58% 5%,67% 12%,78% 8%,88% 17%,100% 10%,96% 82%,88% 77%,80% 89%,68% 82%,57% 94%,46% 84%,35% 93%,24% 82%,13% 91%,4% 78%);filter:drop-shadow(0 2px 2px rgba(35,55,38,.12))}
+.site-header::after{content:"";position:absolute;z-index:0;pointer-events:none;left:0;right:0;bottom:-10px;height:20px;opacity:.88;background:linear-gradient(90deg,#176b45 0 37%,#fffdf6 37% 66%,#c95742 66% 100%);clip-path:polygon(0 0,8% 20%,18% 38%,30% 44%,42% 36%,55% 50%,68% 39%,82% 22%,100% 0,100% 45%,86% 69%,72% 82%,57% 91%,43% 77%,28% 83%,13% 56%,0 38%)}
+.site-header>.brand,.site-header>.menu-toggle,.site-header>.main-nav{position:relative;z-index:2}
+.site-header>.brand{margin-left:116px}
+.site-header .main-nav a{color:#385447}
+.site-header .main-nav a.active,.site-header .main-nav a:hover{background:#e2eadc;color:#174c3c}
+@media(max-width:850px){.site-header{min-height:74px;padding:10px 4%}.site-header::before{left:2%;top:8px;width:74px;height:43px}.site-header>.brand{margin-left:76px}.site-header::after{height:13px;bottom:-7px}}
+/* Homepage introduction echoes the printed Italian academy proposal banner. The Colosseum photograph itself is not modified. */
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:2.2rem 1.3rem 2.5rem;border:1px solid rgba(177,155,122,.25);border-radius:4px;background:radial-gradient(ellipse at 12% 5%,rgba(0,146,70,.10),transparent 31%),radial-gradient(ellipse at 46% 100%,rgba(255,255,255,.9),transparent 42%),radial-gradient(ellipse at 80% 90%,rgba(201,78,54,.09),transparent 32%),linear-gradient(110deg,#fffdf7 0%,#f8f1e6 52%,#fffdf8 100%);box-shadow:0 10px 28px rgba(76,55,31,.07)}
+.hero::before{content:"";position:absolute;z-index:0;pointer-events:none;left:1.1%;top:13px;width:132px;height:57px;opacity:.72;background:repeating-linear-gradient(170deg,transparent 0 4px,rgba(255,255,255,.22) 5px 6px,transparent 7px 10px),linear-gradient(90deg,#17814c 0 33.33%,#fffaf0 33.33% 66.66%,#c94e3c 66.66% 100%);clip-path:polygon(0 18%,9% 8%,18% 16%,28% 4%,39% 14%,50% 5%,61% 15%,72% 7%,84% 16%,100% 8%,96% 82%,84% 74%,73% 91%,60% 80%,48% 94%,35% 83%,23% 93%,11% 78%,3% 85%)}
+.hero::after{content:"";position:absolute;z-index:0;pointer-events:none;left:-2%;right:-2%;bottom:0;height:24px;opacity:.88;background:linear-gradient(90deg,#176b45 0 43%,#fffdf7 43% 68%,#c95742 68% 100%);clip-path:polygon(0 0,13% 35%,28% 64%,43% 56%,58% 72%,73% 48%,88% 18%,100% 0,100% 30%,87% 65%,72% 92%,57% 100%,42% 83%,27% 82%,12% 56%,0 28%)}
+.hero-copy{position:relative;z-index:1;padding:2.6rem 1.2rem 2rem .8rem;background:linear-gradient(112deg,rgba(255,253,247,.78),rgba(255,255,255,.40) 58%,rgba(255,250,243,.18));border-radius:4px}
+.hero-copy h1{color:#174c3c;text-shadow:0 1px rgba(255,255,255,.5)}
+.hero-copy h1 span{color:#bd4a38}
+.hero-badge{background:rgba(226,235,221,.92);border-color:#c7d8c6}
+.hero-copy>p{color:#42594d}
+.hero-art{position:relative;z-index:1}
+.hero-art img{border:7px solid rgba(255,253,247,.92);box-shadow:0 12px 30px rgba(51,48,37,.16)!important}
+@media(max-width:850px){.hero{padding:1.5rem .75rem 2rem}.hero::before{width:95px;height:42px;top:8px}.hero-copy{padding:2rem .65rem 1.4rem}.hero-art img{border-width:4px}}
