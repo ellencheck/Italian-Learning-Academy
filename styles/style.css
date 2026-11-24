@@ -39,29 +39,48 @@ body{background:#f8f4ec}.site-header{padding:12px 5%;box-shadow:0 4px 16px #173f
 
 
 
-/* Clearly visible Italian postcard-inspired tricolore header */
+/* Small Italian tricolore ribbon in the header corner */
 .site-header{
-  position:sticky;top:0;isolation:isolate;overflow:hidden;
-  background:
-    linear-gradient(105deg,rgba(0,146,70,.22) 0%,rgba(0,146,70,.13) 27%,rgba(255,255,255,.92) 48%,rgba(255,255,255,.92) 58%,rgba(206,43,55,.13) 77%,rgba(206,43,55,.22) 100%),
-    #fffdf8!important;
-  border-bottom:1px solid rgba(23,76,60,.2);
-  box-shadow:0 5px 18px rgba(23,76,60,.09);
+  position:sticky;
+  top:0;
+  isolation:isolate;
+  overflow:hidden;
+  background:rgba(255,254,250,.97)!important;
+  border-bottom:1px solid var(--line);
+  box-shadow:0 4px 16px rgba(23,63,44,.07);
 }
 .site-header::before{
-  content:"";position:absolute;inset:0 0 auto;height:9px;
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:-19px;
+  right:22px;
+  width:34px;
+  height:108px;
   background:linear-gradient(90deg,#009246 0 33.333%,#fff 33.333% 66.666%,#ce2b37 66.666% 100%);
-  box-shadow:0 1px 5px rgba(0,0,0,.16);z-index:0;
+  transform:rotate(38deg);
+  transform-origin:top center;
+  clip-path:polygon(0 0,100% 0,100% 100%,50% 84%,0 100%);
+  filter:drop-shadow(2px 3px 3px rgba(0,0,0,.2));
 }
 .site-header::after{
-  content:"ITALIA";position:absolute;right:4%;top:50%;transform:translateY(-50%);
-  color:rgba(0,100,55,.13);font-family:"Playfair Display",Georgia,serif;
-  font-size:clamp(2.8rem,6vw,5rem);font-weight:800;letter-spacing:.2em;
-  line-height:1;pointer-events:none;z-index:0;
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:13px;
+  right:10px;
+  width:31px;
+  height:23px;
+  border-radius:3px 3px 8px 8px;
+  background:linear-gradient(90deg,#009246 0 33.333%,#fff 33.333% 66.666%,#ce2b37 66.666% 100%);
+  transform:rotate(38deg);
+  box-shadow:1px 2px 4px rgba(0,0,0,.18);
 }
-.site-header>.brand,.site-header>.menu-toggle,.site-header>.main-nav{position:relative;z-index:1}
-.site-header .brand img{filter:drop-shadow(0 2px 3px rgba(23,76,60,.16))}
+.site-header>.brand,.site-header>.menu-toggle,.site-header>.main-nav{
+  position:relative;
+  z-index:1;
+}
 @media(max-width:850px){
- .site-header{background:linear-gradient(90deg,rgba(0,146,70,.2),rgba(255,255,255,.92) 48%,rgba(206,43,55,.2))!important}
- .site-header::after{right:3%;font-size:2.3rem}
+  .site-header::before{right:19px;height:91px;width:29px}
+  .site-header::after{right:9px;top:10px;width:27px;height:20px}
 }
