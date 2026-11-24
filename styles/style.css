@@ -27,3 +27,12 @@ body{background:#f8f4ec}.site-header{padding:12px 5%;box-shadow:0 4px 16px #173f
 .lesson-hero{background:linear-gradient(105deg,rgba(23,76,60,.96),rgba(23,76,60,.7)),url('https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_of_Rome,_Italy.jpg?width=1200') center/cover!important;border-radius:22px!important;box-shadow:var(--shadow)}
 .curr-hero{background:linear-gradient(105deg,rgba(23,76,60,.95),rgba(23,76,60,.7)),url('https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canal,_Venice,_Italy.jpg?width=1200') center/cover!important;box-shadow:var(--shadow)}
 @media(max-width:700px){.page-header{border-radius:16px;margin-top:1rem}.hero-art img{aspect-ratio:1.1}.card-image{height:165px}}
+
+/* HERO PHOTO FIX: balanced panorama and clean framing */
+.hero{align-items:center;grid-template-columns:1fr 1.15fr;gap:2.5rem;padding-block:2.4rem}
+.hero-art{position:relative;padding:0!important;margin:0!important;max-width:100%;min-width:0}
+.hero-art:before{display:none!important}
+.hero-art img{display:block;width:100%;height:auto;aspect-ratio:1280/600;object-fit:cover;object-position:center;border-radius:18px!important;box-shadow:0 18px 40px rgba(23,76,60,.15)!important}
+.hero-art .floating-note{display:none!important}
+.hero-art .art-caption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:.8rem 1.1rem;border-radius:0 0 18px 18px;background:linear-gradient(transparent,rgba(14,40,31,.72));color:#fff!important;display:flex;justify-content:space-between;align-items:center}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:1.4rem}.hero-art img{aspect-ratio:16/9;max-height:440px}.hero-art .art-caption{font-size:.75rem}}
