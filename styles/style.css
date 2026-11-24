@@ -37,9 +37,54 @@ body{background:#f8f4ec}.site-header{padding:12px 5%;box-shadow:0 4px 16px #173f
 .hero-art .art-caption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:.8rem 1.1rem;border-radius:0 0 18px 18px;background:linear-gradient(transparent,rgba(14,40,31,.72));color:#fff!important;display:flex;justify-content:space-between;align-items:center}
 @media(max-width:850px){.hero{grid-template-columns:1fr;gap:1.4rem}.hero-art img{aspect-ratio:16/9;max-height:440px}.hero-art .art-caption{font-size:.75rem}}
 
-/* Subtle Italian tricolore atmosphere in the site header */
-.site-header{position:sticky;isolation:isolate;overflow:hidden;background:linear-gradient(100deg,rgba(0,146,70,.055) 0%,rgba(255,255,255,.72) 34%,rgba(255,255,255,.78) 66%,rgba(206,43,55,.055) 100%),rgba(255,254,250,.97)}
-.site-header::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#16834b 0 33.333%,#fff 33.333% 66.666%,#d64b3c 66.666% 100%);z-index:0}
-.site-header::after{content:"";position:absolute;inset:4px 0 0;background:linear-gradient(90deg,rgba(0,146,70,.035) 0 33.333%,rgba(255,255,255,.22) 33.333% 66.666%,rgba(206,43,55,.035) 66.666% 100%);pointer-events:none;z-index:0}
-.site-header>.brand,.site-header>.menu-toggle,.site-header>.main-nav{position:relative;z-index:1}
-.site-header .brand img{filter:drop-shadow(0 2px 3px rgba(23,76,60,.12))}
+
+/* Italian tricolore header treatment */
+.site-header{
+  position:sticky;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,
+      rgba(0,146,70,.16) 0%,
+      rgba(0,146,70,.10) 24%,
+      rgba(255,255,255,.82) 42%,
+      rgba(255,255,255,.82) 60%,
+      rgba(206,43,55,.10) 78%,
+      rgba(206,43,55,.16) 100%),
+    #fffdf8;
+  border-bottom:1px solid rgba(23,76,60,.16);
+  box-shadow:0 5px 18px rgba(23,76,60,.055);
+}
+.site-header::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:7px;
+  background:linear-gradient(90deg,#009246 0 33.333%,#fff 33.333% 66.666%,#ce2b37 66.666% 100%);
+  box-shadow:0 1px 4px rgba(0,0,0,.12);
+  z-index:0;
+}
+.site-header::after{
+  content:"ITALIA";
+  position:absolute;
+  right:5%;
+  top:50%;
+  transform:translateY(-50%);
+  color:rgba(23,76,60,.075);
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(2.4rem,5vw,4.5rem);
+  font-weight:800;
+  letter-spacing:.18em;
+  line-height:1;
+  pointer-events:none;
+  z-index:0;
+}
+.site-header>.brand,.site-header>.menu-toggle,.site-header>.main-nav{
+  position:relative;
+  z-index:1;
+}
+.site-header .brand img{filter:drop-shadow(0 2px 3px rgba(23,76,60,.16))}
+@media(max-width:850px){
+  .site-header{background:linear-gradient(90deg,rgba(0,146,70,.14),rgba(255,255,255,.88) 48%,rgba(206,43,55,.14))}
+  .site-header::after{right:3%;font-size:2.2rem}
+}
