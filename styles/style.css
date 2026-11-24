@@ -120,3 +120,81 @@ body.home-page{background:#f7f0e5;color:#173d32}
  .home-page .home-shortcuts{width:92%;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding-top:12px}
  .home-page .shortcut-card{min-height:100px;font-size:.94rem}
 }
+
+
+/* FINAL REFERENCE PALETTE + homepage geometry corrections */
+:root{
+ --green:#174c3c;
+ --green-soft:#e8efe8;
+ --cream:#f7f3eb;
+ --paper:#ffffff;
+ --coral:#174c3c;
+ --ink:#203b32;
+ --muted:#66766d;
+ --line:#e5e8e3;
+ --shadow:0 8px 24px rgba(25,61,47,.08);
+}
+body{background:#f7f3eb;color:#203b32}
+.eyebrow,.card-body small,.practice-icon,.translate-symbol,.sparkle,.flower,
+.story-topline,.swap-arrow{color:#174c3c}
+.hero-copy h1 span,.page-header h1 em{color:#174c3c}
+.page-header,.lesson-hero,.curr-hero{
+ background-color:#174c3c;
+}
+.home-page .site-header{
+ min-height:96px;
+ background:#fff!important;
+ padding:10px clamp(22px,5vw,64px);
+ border-bottom:1px solid #e8e9e5;
+ box-shadow:none;
+}
+.home-page .brand{gap:9px}
+.home-page .brand img{width:60px;height:60px}
+.home-page .brand span{font-family:"Playfair Display",Georgia,serif;font-size:1.32rem;line-height:1.02;color:#174c3c}
+.home-page .brand em{color:#174c3c}
+.home-page .main-nav a{color:#263c34}
+.home-page .main-nav a.active,.home-page .main-nav a:hover{background:transparent;color:#174c3c;text-decoration:none}
+.home-page .reference-hero{
+ height:clamp(250px,34vw,360px);
+ background:#dceaf5;
+}
+.home-page .reference-hero .hero-art{z-index:0}
+.home-page .reference-hero .hero-art img{
+ object-fit:cover;
+ object-position:center 46%;
+ border:0!important;
+ border-radius:0!important;
+ box-shadow:none!important;
+}
+.home-page .reference-hero::before{
+ z-index:1;
+ background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 29%,rgba(255,255,255,.48) 48%,rgba(255,255,255,0) 68%);
+}
+.home-page .reference-hero .hero-copy{z-index:2}
+.home-page .reference-hero .hero-copy h1{color:#174c3c}
+.home-page .reference-hero .hero-copy p{color:#202e29}
+.home-page .reference-hero .button{
+ background:#176044;border-color:#176044;color:#fff;border-radius:9px;
+}
+.home-page .home-shortcuts{
+ width:min(82%,1050px);
+ margin:-1px auto 0;
+ padding:14px 0 12px;
+}
+.home-page .shortcut-card{
+ background:#fff;
+ border:1px solid #f0eee9;
+ border-radius:16px;
+ color:#203b32;
+ box-shadow:0 3px 12px rgba(25,61,47,.05);
+}
+.home-page .shortcut-card svg{stroke:#174c3c}
+.home-page .site-footer{background:#174c3c}
+@media(max-width:850px){
+ .home-page .site-header{min-height:78px}
+ .home-page .reference-hero{height:clamp(265px,48vw,340px)}
+}
+@media(max-width:560px){
+ .home-page .reference-hero{height:290px}
+ .home-page .reference-hero .hero-art img{object-position:58% center}
+}
