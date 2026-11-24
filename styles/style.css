@@ -319,3 +319,20 @@ body.home-page{margin:0!important;background:#f7f1e8!important;color:#203b32!imp
  .home-page .reference-hero .hero-copy h1{margin:0 0 12px!important;font-size:clamp(38px,5vw,62px)!important;line-height:1.02!important;color:#174c3c!important}
  .home-page .reference-hero .hero-copy p{margin:0 0 18px!important;color:#252f2a!important;font-size:clamp(17px,2vw,24px)!important}
 }
+/* Three matching shortcut cards beneath the main four */
+.home-page .home-shortcuts-secondary{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  width:min(62%,780px)!important;
+  margin:0 auto!important;
+  padding-top:0!important;
+}
+@media(max-width:850px){
+  .home-page .home-shortcuts-secondary{width:90%!important}
+}
+@media(max-width:560px){
+  .home-page .home-shortcuts-secondary{
+    width:92%!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .home-page .home-shortcuts-secondary .shortcut-card:last-child{grid-column:1/-1}
+}
