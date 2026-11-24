@@ -38,53 +38,30 @@ body{background:#f8f4ec}.site-header{padding:12px 5%;box-shadow:0 4px 16px #173f
 @media(max-width:850px){.hero{grid-template-columns:1fr;gap:1.4rem}.hero-art img{aspect-ratio:16/9;max-height:440px}.hero-art .art-caption{font-size:.75rem}}
 
 
-/* Italian tricolore header treatment */
+
+/* Clearly visible Italian postcard-inspired tricolore header */
 .site-header{
-  position:sticky;
-  isolation:isolate;
-  overflow:hidden;
+  position:sticky;top:0;isolation:isolate;overflow:hidden;
   background:
-    linear-gradient(90deg,
-      rgba(0,146,70,.16) 0%,
-      rgba(0,146,70,.10) 24%,
-      rgba(255,255,255,.82) 42%,
-      rgba(255,255,255,.82) 60%,
-      rgba(206,43,55,.10) 78%,
-      rgba(206,43,55,.16) 100%),
-    #fffdf8;
-  border-bottom:1px solid rgba(23,76,60,.16);
-  box-shadow:0 5px 18px rgba(23,76,60,.055);
+    linear-gradient(105deg,rgba(0,146,70,.22) 0%,rgba(0,146,70,.13) 27%,rgba(255,255,255,.92) 48%,rgba(255,255,255,.92) 58%,rgba(206,43,55,.13) 77%,rgba(206,43,55,.22) 100%),
+    #fffdf8!important;
+  border-bottom:1px solid rgba(23,76,60,.2);
+  box-shadow:0 5px 18px rgba(23,76,60,.09);
 }
 .site-header::before{
-  content:"";
-  position:absolute;
-  inset:0 0 auto;
-  height:7px;
+  content:"";position:absolute;inset:0 0 auto;height:9px;
   background:linear-gradient(90deg,#009246 0 33.333%,#fff 33.333% 66.666%,#ce2b37 66.666% 100%);
-  box-shadow:0 1px 4px rgba(0,0,0,.12);
-  z-index:0;
+  box-shadow:0 1px 5px rgba(0,0,0,.16);z-index:0;
 }
 .site-header::after{
-  content:"ITALIA";
-  position:absolute;
-  right:5%;
-  top:50%;
-  transform:translateY(-50%);
-  color:rgba(23,76,60,.075);
-  font-family:"Playfair Display",Georgia,serif;
-  font-size:clamp(2.4rem,5vw,4.5rem);
-  font-weight:800;
-  letter-spacing:.18em;
-  line-height:1;
-  pointer-events:none;
-  z-index:0;
+  content:"ITALIA";position:absolute;right:4%;top:50%;transform:translateY(-50%);
+  color:rgba(0,100,55,.13);font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(2.8rem,6vw,5rem);font-weight:800;letter-spacing:.2em;
+  line-height:1;pointer-events:none;z-index:0;
 }
-.site-header>.brand,.site-header>.menu-toggle,.site-header>.main-nav{
-  position:relative;
-  z-index:1;
-}
+.site-header>.brand,.site-header>.menu-toggle,.site-header>.main-nav{position:relative;z-index:1}
 .site-header .brand img{filter:drop-shadow(0 2px 3px rgba(23,76,60,.16))}
 @media(max-width:850px){
-  .site-header{background:linear-gradient(90deg,rgba(0,146,70,.14),rgba(255,255,255,.88) 48%,rgba(206,43,55,.14))}
-  .site-header::after{right:3%;font-size:2.2rem}
+ .site-header{background:linear-gradient(90deg,rgba(0,146,70,.2),rgba(255,255,255,.92) 48%,rgba(206,43,55,.2))!important}
+ .site-header::after{right:3%;font-size:2.3rem}
 }
